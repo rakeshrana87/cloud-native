@@ -1,0 +1,17 @@
+# The secrets file should not be checked into Git. It's published only for demonstration purpose.
+secretGenerator:
+- name: h2-root-pass
+  literals:
+  - password=password
+- name: h2-user-pass
+  literals:
+  - username=sa
+  - password=password 
+- name: h2-db-url
+  literals:
+  - database=polls
+  - url=jdbc:h2:file:~/data/demo
+resources:
+  - h2-deployment.yaml
+  - spring-boot-app.yaml
+  - polling-app-client.yaml  
