@@ -1,4 +1,4 @@
-package com.knet.demo.health;
+package demo.health;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;

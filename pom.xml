@@ -28,5 +28,7 @@
 
 	<modules>
 		<module>springApp</module>
+		<module>keycloakSpring</module>
+		<module>angular-app-ui</module>
 	</modules>
 </project>

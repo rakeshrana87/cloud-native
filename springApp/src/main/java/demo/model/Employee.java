@@ -1,4 +1,4 @@
-package com.knet.demo.model;
+package demo.model;
 
 import java.io.Serializable;
 import java.nio.file.Files;
