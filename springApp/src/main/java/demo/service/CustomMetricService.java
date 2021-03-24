@@ -1,4 +1,4 @@
-package com.knet.demo.service;
+package demo.service;
 
 import java.util.ArrayList;
 import java.util.Collection;

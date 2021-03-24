@@ -1,0 +1,13 @@
+com\auth\config\EmbeddedKeycloakConfig$1.class
+com\auth\config\EmbeddedKeycloakRequestFilter.class
+com\auth\config\EmbeddedKeycloakApplication.class
+com\auth\AuthorizationServerApp.class
+META-INF\spring-configuration-metadata.json
+com\auth\config\KeycloakServerProperties$AdminUser.class
+com\auth\config\KeycloakServerProperties.class
+com\auth\config\EmbeddedKeycloakRequestFilter$1.class
+com\auth\config\RegularJsonConfigProviderFactory.class
+com\auth\config\SimplePlatformProvider$1.class
+com\auth\config\Resteasy3Provider.class
+com\auth\config\EmbeddedKeycloakConfig.class
+com\auth\config\SimplePlatformProvider.class

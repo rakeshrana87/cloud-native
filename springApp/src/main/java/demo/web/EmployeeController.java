@@ -1,4 +1,4 @@
-package com.knet.demo.web;
+package demo.web;
 
 import java.util.List;
 
@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.knet.demo.repository.EmployeRepository;
+import demo.repository.EmployeRepository;
+
 
 @RestController
 @RequestMapping(value = "/api/v2/employee", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -23,7 +24,7 @@ public class EmployeeController {
 	private final EmployeRepository employeeRepository;
 	
 	@Autowired
-	private  com.knet.demo.model.Employee employee;
+	private  demo.model.Employee employee;
 	
 	public EmployeeController(final EmployeRepository petRepository) {
 		super();
@@ -31,7 +32,7 @@ public class EmployeeController {
 	}
 
 	@PostMapping
-	public void create(@RequestBody com.knet.demo.repository.EmployeePojo employeePojo) {
+	public void create(@RequestBody demo.repository.EmployeePojo employeePojo) {
 		LOGGER.info("Crete method called with data : {}", employeePojo);
 		
 		employee.setFirstName(employeePojo.getFirstName());
@@ -46,7 +47,7 @@ public class EmployeeController {
 	}
 
 	@GetMapping
-	public List<com.knet.demo.model.Employee> view() {
+	public List<demo.model.Employee> view() {
 		LOGGER.info("View method called");
 		return employeeRepository.findAll();
 	}

@@ -1,4 +1,4 @@
-package com.knet.demo.repository;
+package demo.repository;
 
 
 import java.io.Serializable;
