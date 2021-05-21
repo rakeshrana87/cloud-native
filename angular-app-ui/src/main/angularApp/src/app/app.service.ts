@@ -7,8 +7,14 @@ import 'rxjs/add/operator/map';
  
 export class Foo {
   constructor(
-    public id: number,
-    public name: string) { }
+    public userId: string,
+    public company: String ,
+    public jobTitleName: String ,
+    public dept: String ,
+    public sex: String ,
+    public firstName: String ,
+    public lastName: String 
+     ) { }
 } 
 
 @Injectable()
@@ -28,6 +34,12 @@ export class AppService {
     params.append('code',code);
 
     let headers = new HttpHeaders({'Content-type': 'application/x-www-form-urlencoded; charset=utf-8'});
+    headers.append('Accept', 'application/json');
+
+    headers.append('Access-Control-Allow-Origin', '*');
+    headers.append('Access-Control-Allow-Credentials', 'true');
+  
+    headers.append('GET', 'OPTIONS');
      this._http.post('http://localhost:8083/auth/realms/baeldung/protocol/openid-connect/token', params.toString(), { headers: headers })
     .subscribe(
       data => this.saveToken(data),
@@ -44,7 +56,17 @@ export class AppService {
   }
 
   getResource(resourceUrl) : Observable<any>{
-    var headers = new HttpHeaders({'Content-type': 'application/x-www-form-urlencoded; charset=utf-8', 'Authorization': 'Bearer '+Cookie.get('access_token')});
+    console.log("resource url is: " + resourceUrl );
+    var auth='Bearer '+ Cookie.get('access_token');
+    console.log("auth header is: " + auth );
+    let headers = new HttpHeaders({'Content-type': 'application/json'
+    , 'Authorization': auth
+    ,'Accept': 'application/json'
+    ,'Access-Control-Allow-Origin': '*'
+    ,'Access-Control-Allow-Credentials': 'true'
+    });
+    
+   
     return this._http.get(resourceUrl, { headers: headers })
                    .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
   }
