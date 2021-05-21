@@ -4,5 +4,7 @@ C:\Users\ezraksi\git\cloud-native\springApp\src\main\java\demo\model\Employee.ja
 C:\Users\ezraksi\git\cloud-native\springApp\src\main\java\demo\Application.java
 C:\Users\ezraksi\git\cloud-native\springApp\src\main\java\demo\health\CustomHealthIndicator.java
 C:\Users\ezraksi\git\cloud-native\springApp\src\main\java\demo\repository\EmployeePojo.java
+C:\Users\ezraksi\git\cloud-native\springApp\src\main\java\com\demo\resource\SecurityConfig.java
 C:\Users\ezraksi\git\cloud-native\springApp\src\main\java\demo\service\CustomMetricService.java
-C:\Users\ezraksi\git\cloud-native\springApp\src\main\java\org\springApp\App.java
+C:\Users\ezraksi\git\cloud-native\springApp\src\main\java\demo\service\LogService.java
+C:\Users\ezraksi\git\cloud-native\springApp\src\main\java\com\demo\resource\MyFilter.java

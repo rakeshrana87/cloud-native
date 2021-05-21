@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,6 +18,7 @@ import demo.repository.EmployeRepository;
 
 @RestController
 @RequestMapping(value = "/api/v2/employee", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+@CrossOrigin("*")
 public class EmployeeController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(EmployeeController.class);
@@ -47,8 +49,10 @@ public class EmployeeController {
 	}
 
 	@GetMapping
+	
 	public List<demo.model.Employee> view() {
 		LOGGER.info("View method called");
+		
 		return employeeRepository.findAll();
 	}
 

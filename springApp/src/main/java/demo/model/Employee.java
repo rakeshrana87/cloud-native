@@ -34,10 +34,12 @@ public class Employee implements Serializable {
 
 	private String lastName;
 	
-	public static void main(String[] args) {
-	//	 Path fileName = Path.of("/tmp/password");
-		
-	}
+	/*
+	 * public static void main(String[] args) { // Path fileName =
+	 * Path.of("/tmp/password");
+	 * 
+	 * }
+	 */
 
 	public Employee() {
 		super();
