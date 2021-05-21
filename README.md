@@ -1,2 +1,2 @@
 # cloud-native
-This is for clout native practice
+This is for cloud native practice
